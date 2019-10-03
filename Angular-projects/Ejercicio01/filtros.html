@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Boostrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--  Anfular 3.15  -->
+    <script src="js/lib/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container" ng-app>
+
+        <h1>Filtros :: Filters</h1>
+        <h4>en angularjs</h4>
+        <hr>
+
+        <p>filtro de texto: {{ "FerNandO"}}</p>
+        <!-- TODO: Implementar filtros de texto -->
+        <p>filtro de texto: {{ "FerNandO" | uppercase}}</p>
+        <p>filtro de texto: {{ "FerNandO" | lowercase}}</p>
+        <p>filtro de moneda: {{ 1350}}</p>
+        <br>
+        <!-- TODO: Implementar filtros de moneda -->
+        <p>filtro de moneda: {{ 1350 | currency }}</p>
+        <p>filtro de moneda: {{ 1350 | currency:'' }}</p>
+        <br>
+        <!-- TODO: Implementar filtros de número -->
+        <p>filtro de numero {{ 135000}} </p>
+        <p>filtro de numero {{ 135000 | number}} </p>
+        
+
+    </div>
+    
+</body>
+</html>

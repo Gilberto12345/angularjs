@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Boostrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--  Anfular 3.15  -->
+    <script src="js/lib/angular.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- TODO: Indicar que todo lo que esta dentro de este elemento forma parte de la aplicación  -->
+    <div class="container" ng-app>
+
+        <h1>ng-model</h1>
+        <h4>en angularjs</h4>
+        <hr>
+        <!-- TODO: Las variables deben de ser mostradas entre dobles llaves -->
+        <p>Su nombre: {{ nombre | uppercase}}
+            <br>
+            <!-- TODO: Con la directiva ng-model que se aplica en las entradas de datos,
+                 se pueden crear variables que se actualizan de inmediato en toda la aplicación -->
+            <input type="text" ng-model="nombre" class="form-control" placeholder="Nombre">
+        </p>
+        <p>
+            Seleccione un pais: {{pais}}
+            <select class="form-control" ng-model="pais">
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="México">México</option>
+                <option value="Colombia">Colombia</option>
+            </select>
+        </p>
+        <p>
+            Seleccione las opciones que desea: {{opt1}} {{opt2}}
+            <br>
+            <input type="checkbox" ng-model ="opt1">opcion 1
+            <br>
+            <input type="checkbox" ng-model ="opt2">opcion 2
+        </p>
+        <p>
+            Seleccione genero: {{genero}}
+            <br>
+            <input type="radio" value="M" ng-model ="genero">Masculino
+            <br>
+            <input type="radio" value="F" ng-model ="genero">Femenino
+        </p>
+
+
+    </div>
+
+</body>
+</hCosta Rica México Colombiaml>

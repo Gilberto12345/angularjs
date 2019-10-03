@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Boostrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--  Anfular 3.15  -->
+    <script src="js/lib/angular.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" ng-app>
+
+        <h1>ng-model</h1>
+        <h4>en angularjs</h4>
+        <hr>
+        <p>
+            <br>
+            <input type="text" ng-model="nombre" class="form-control" placeholder="Nombre">
+        </p>
+        <p>
+            <select class="form-control" ng-model="trabajo">
+                <option value="">Lugar de trabajo</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="México">México</option>
+                <option value="Colombia">Colombia</option>
+            </select>
+        </p>
+        <p>
+            Salario en dolares: {{salario | currency}}
+            <br>
+            <input type="number" ng-model ="salario" placeholder="Salario" placeholder="Salario">
+        </p>
+        <p>
+            Nombre: {{ nombre | uppercase}}
+            <br>
+            Lugar de trabajo: {{ trabajo | uppercase}}
+            <br>
+            Salario: {{ salario | currency}}
+            <br>
+        </p>
+
+
+    </div>
+
+</body>
+</hCosta Rica México Colombiaml>
