@@ -10,6 +10,9 @@
     <!-- Incluir Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <!-- Animate css -->
+    <link rel="stylesheet" href="css/animate.css">
+
     <!-- Incluir AngularJS -->
     <script src="js/lib/angular.min.js"></script>
 
@@ -24,7 +27,7 @@
     <div class="container" ng-controller="profesorCtrl as profe">
 
         <h1>Profesor</h1>
-        <h4>{{ profe.profesor.nombre }}</h4>
+        <h4>{{ profesor.nombre }}</h4>
         <hr>
 
         <div class="row">
@@ -34,7 +37,7 @@
                 <section class="panel">
                     <div class="panel-body" align="center">
                         <!-- TODO: La directiva ng-src evita el error de navegador si se pone solo src -->
-                        <img ng-src="{{ profe.profesor.foto }}" class="img-circle" alt="" width="150px" height="150px">
+                        <img ng-src="{{ profesor.foto }}" class="img-circle" alt="" width="150px" height="150px">
                     </div>
                 </section>
             </div>
@@ -43,32 +46,37 @@
             <div class="col-sm-9">
                 <section class="panel">
                     <div class="panel-body">
-                        {{ profe.profesor.bio}}
+                        {{ profesor.bio}}
                         <br>
                         <br>
-                        <strong>Edad:</strong> {{profe.profesor.edad}}
+                        <strong>Edad:</strong> {{profesor.edad}} años
+                        <br>
+                        <button class="btn btn-primary" ng-click="editarProfesor()">editar</button>
                     </div>
                 </section>
             </div>
 
         </div>
 
-        <div class="row">
+        <div class="row animated fadeIn faster" ng-show="showCaja">
             <div class="col-sm-6">
                 <section class="panel">
                     <div class="panel-body">
 
                         Nombre
-                        <input type="text" class="form-control" ng-model="profe.profesor.nombre">
+                        <input type="text" class="form-control" ng-model="editando.nombre">
                         <br>
 
                         Edad
-                        <input type="number" class="form-control" ng-model="profe.profesor.edad">
+                        <input type="number" class="form-control" ng-model="editando.edad">
                         <br>
 
                         Bio
-                        <textarea class="form-control" ng-model="profe.profesor.bio" rows="5"></textarea>
+                        <textarea class="form-control" ng-model="editando.bio" rows="5"></textarea>
                         <br>
+
+                        <button class="btn btn-primary" ng-click="save()">Guardar</button>
+                        <button class="btn btn-danger" ng-click="cancel()">Cancelar</button>
 
                     </div>
                 </section>

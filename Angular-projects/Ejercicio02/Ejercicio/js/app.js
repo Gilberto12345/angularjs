@@ -1,9 +1,31 @@
 const app = angular.module('universidadApp', [ ]);
 /* Los controladores se encargan de todas las funciones relacionadas con algun objeto */
-app.controller('profesorCtrl', function (){
+/* Scope es una variable global que no esta solo dentro del controlador */
+app.controller('profesorCtrl', function ($scope){
 
-    this.profesor = profesorData;
+	$scope.profesor = profesorData;
+	$scope.editando = {};
 
+	$scope.showCaja = false;
+
+	$scope.editarProfesor = function(){
+		angular.copy($scope.profesor,$scope.editando);
+		$scope.showCaja = true;
+	}
+
+	$scope.save = function (){
+		angular.copy($scope.editando,$scope.profesor);
+		$scope.showCaja = false;
+
+	}
+
+	$scope.cancel = function (){
+		$scope.editando = {};
+		$scope.showCaja = false;
+		
+	}
+
+    /* this.profesor = profesorData; */
 });
 
 var profesorData = {
