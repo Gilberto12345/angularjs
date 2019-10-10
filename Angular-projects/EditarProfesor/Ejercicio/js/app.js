@@ -6,6 +6,7 @@ app.controller('profesorCtrl', function ($scope){
 	$scope.profesor = profesorData;
 	$scope.editando = {};
 
+	/* Variable que controlo la visibilidad del formulario */
 	$scope.showCaja = false;
 
 	$scope.editarProfesor = function(){
